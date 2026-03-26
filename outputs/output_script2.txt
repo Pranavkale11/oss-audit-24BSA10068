@@ -1,0 +1,15 @@
+Package Inspector - python3
+====================================
+
+Status   : Installed
+Version  : Python 3.12.3
+Location : /usr/bin/python3
+
+Package Manager Info:
+ii  python3   3.12.3-0ubuntu2.1   amd64
+ii  libpython3-stdlib:amd64
+ii  libpython3.12-minimal:amd64
+ii  libpython3.12-stdlib:amd64
+ii  libpython3.12:amd64
+
+Python: community-driven programming language

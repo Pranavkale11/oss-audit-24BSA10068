@@ -1,0 +1,9 @@
+My Open Source Manifesto
+Date: 26 March 2026
+
+I use Git every day, which is built by the open-source community.
+For me, freedom means learning and sharing knowledge.
+I believe in collaborating and growing together.
+One day, I will build AI tools for developers and share them freely.
+
+This is my commitment to open source.
