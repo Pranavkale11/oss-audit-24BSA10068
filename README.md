@@ -1,9 +1,13 @@
+Here's the humanized version of your README — written in a natural, first-person voice that still covers all the technical details but reads like a real student wrote it:
+
+---
+
 # OSS Audit — Python
 **Open Source Software Capstone Project | VITyarthi**
 
 ---
 
-## Student Details
+## About Me
 
 | Field | Details |
 |---|---|
@@ -15,15 +19,15 @@
 
 ---
 
-## About This Project
+## What This Project Is About
 
-This project is a structured audit of **Python** — one of the most widely used open-source programming languages in the world. The audit covers Python's origin story, its PSF (Python Software Foundation) license, its Linux footprint, its FOSS ecosystem, and a comparison with proprietary alternatives.
+For my OSS capstone, I chose to audit **Python** — honestly, it felt like an obvious pick. Python is everywhere: in data science, web development, automation, education, and research. It's also a great example of how open-source software can become genuinely world-changing without being owned by any single company.
 
-Alongside the written report, five shell scripts were written and tested on Ubuntu to demonstrate practical Linux and Bash scripting skills.
+This audit covers where Python came from, how it's licensed (PSF License), how it lives on Linux, and how it compares to proprietary alternatives. Alongside the written report, I wrote five Bash scripts on Ubuntu to put what I've been learning into practice.
 
 ---
 
-## Repository Structure
+## What's in the Repo
 
 ```
 oss-audit/
@@ -37,16 +41,15 @@ oss-audit/
 
 ---
 
-## Scripts Overview
+## The Scripts
 
 ### Script 1 — System Identity Report
 **File:** `script1_system_identity.sh`
 
-Displays a welcome-screen style system identity report including the Linux distribution, kernel version, current user, uptime, date/time, and license information for both the OS (GNU GPL) and Python (PSF License).
+This one prints a clean welcome-screen style report about the system — distro, kernel, current user, uptime, date/time, and the licenses for both Ubuntu (GNU GPL) and Python (PSF). Think of it as a "who am I and what am I running" snapshot.
 
-**Concepts used:** Variables, `echo`, command substitution `$()`, output formatting.
+**Concepts practiced:** Variables, `echo`, command substitution with `$()`, output formatting.
 
-**How to run:**
 ```bash
 chmod +x script1_system_identity.sh
 ./script1_system_identity.sh
@@ -71,11 +74,10 @@ Python License: PSF License
 ### Script 2 — FOSS Package Inspector
 **File:** `script2_package_inspector.sh`
 
-Checks whether `python3` is installed on the system, reports its version and install path, lists related packages via `dpkg`, and uses a `case` statement to print a short description of Python's purpose.
+This script checks whether `python3` is installed, tells you its version and path, lists related packages using `dpkg`, and uses a `case` statement to describe what Python actually does. Useful for quickly verifying a Python install on any Debian-based system.
 
-**Concepts used:** `if-then-else`, `case` statement, `dpkg -l`, pipe with `grep`, `command -v`.
+**Concepts practiced:** `if-then-else`, `case` statements, `dpkg -l`, piping with `grep`, `command -v`.
 
-**How to run:**
 ```bash
 chmod +x script2_package_inspector.sh
 ./script2_package_inspector.sh
@@ -95,11 +97,10 @@ Python: community-driven programming language
 ### Script 3 — Disk and Permission Auditor
 **File:** `script3_disk_auditor.sh`
 
-Loops through a list of important system directories (`/etc`, `/var/log`, `/home`, `/usr/bin`, `/tmp`) and reports the permissions, owner, and size of each. Also checks if the Python library directory exists and prints its permissions.
+I loop through five important system directories (`/etc`, `/var/log`, `/home`, `/usr/bin`, `/tmp`) and print out their permissions, owner, and size. The script also checks if Python's library directory exists and shows its permissions. It's a handy way to understand how Linux manages access to critical paths.
 
-**Concepts used:** `for` loop, arrays, `ls -ld`, `du -sh`, `awk`, `cut`, conditional `-d` check.
+**Concepts practiced:** `for` loops, arrays, `ls -ld`, `du -sh`, `awk`, `cut`, conditional `-d` checks.
 
-**How to run:**
 ```bash
 chmod +x script3_disk_auditor.sh
 ./script3_disk_auditor.sh
@@ -121,13 +122,12 @@ drwxr-xr-x 3 root root 4096 Aug 5 2025 /usr/lib/python3
 ### Script 4 — Log File Analyzer
 **File:** `script4_log_analyzer.sh`
 
-Reads a log file line by line, counts how many lines contain a given keyword (default: `error`), and prints a summary along with the last 5 matching lines.
+This one reads a log file line by line, counts how many lines contain a keyword (I used `error` as the default), and prints a summary with the last 5 matching lines. You can pass in any log file and keyword as arguments, which makes it pretty flexible.
 
-**Concepts used:** `while read` loop, `if-then`, counter variables, command-line arguments (`$1`, `$2`), `grep`.
+**Concepts practiced:** `while read` loop, `if-then`, counter variables, command-line arguments (`$1`, `$2`), `grep`.
 
-**Dependencies:** A readable log file (e.g., `/var/log/syslog`).
+**Needs:** A readable log file on your system (like `/var/log/syslog`).
 
-**How to run:**
 ```bash
 chmod +x script4_log_analyzer.sh
 ./script4_log_analyzer.sh /var/log/syslog error
@@ -140,35 +140,34 @@ Last 5 matches:
 2026-03-24T00:17:01 ... Error creating IO channel ...
 ```
 
-> **Note:** Replace `/var/log/syslog` with the path to any log file on your system.
+> **Tip:** Swap out `/var/log/syslog` for any log file you want to analyze.
 
 ---
 
 ### Script 5 — Open Source Manifesto Generator
 **File:** `script5_manifesto_generator.sh`
 
-Interactively asks the user three questions and generates a personalised open source philosophy statement, saving it to a `.txt` file (`manifesto_pranav.txt`).
+My favourite one. It asks you three questions about your relationship with open source, then generates a personalized philosophy statement and saves it to a `.txt` file. It felt fitting to end the project with something reflective.
 
-**Concepts used:** `read` for user input, string concatenation, file writing with `>` and `>>`, `date` command, `cat`.
+**Concepts practiced:** `read` for user input, string concatenation, writing to files with `>` and `>>`, `date`, `cat`.
 
-**How to run:**
 ```bash
 chmod +x script5_manifesto_generator.sh
 ./script5_manifesto_generator.sh
 ```
 
-You will be prompted to enter:
-1. A tool you use daily
+You'll be asked:
+1. A tool you use every day
 2. What freedom means to you
-3. Something you would like to build and share
+3. Something you'd like to build and share with the world
 
-The manifesto is saved to `manifesto_pranav.txt` in the current directory.
+Your manifesto gets saved to `manifesto_pranav.txt` in the current directory.
 
 ---
 
 ## Dependencies
 
-All scripts are written for **Ubuntu / Debian-based Linux systems**. No additional software installation is required beyond what comes with a standard Ubuntu install.
+Everything runs on a standard Ubuntu install — no extra software needed.
 
 | Tool | Purpose | Pre-installed? |
 |---|---|---|
@@ -180,17 +179,17 @@ All scripts are written for **Ubuntu / Debian-based Linux systems**. No addition
 
 ---
 
-## How to Clone and Run
+## How to Get Started
 
 ```bash
-# Clone the repository
+# Clone the repo
 git clone https://github.com/<your-username>/oss-audit-<rollnumber>.git
 cd oss-audit-<rollnumber>
 
-# Make all scripts executable
+# Make all scripts executable at once
 chmod +x *.sh
 
-# Run each script
+# Run them one by one
 ./script1_system_identity.sh
 ./script2_package_inspector.sh
 ./script3_disk_auditor.sh
@@ -202,4 +201,8 @@ chmod +x *.sh
 
 ## License
 
-This project is submitted as part of the Open Source Software course at VIT. All shell scripts are original work by Pranav. Python is licensed under the [PSF License](https://docs.python.org/3/license.html). Ubuntu/Linux is licensed under [GNU GPL v2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
+Submitted as part of the Open Source Software course at VIT. All shell scripts are original work by Pranav. Python is licensed under the [PSF License](https://docs.python.org/3/license.html) and Ubuntu/Linux under [GNU GPL v2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
+
+---
+
+The key changes I made: replaced stiff formal headers with more conversational ones, added a bit of personal voice ("honestly, it felt like an obvious pick", "my favourite one"), softened the clinical descriptions into natural explanations, and made the "How to Run" sections flow more naturally. All the technical content is still accurate and complete.
