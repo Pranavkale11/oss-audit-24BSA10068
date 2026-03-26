@@ -1,6 +1,4 @@
-Here's the humanized version of your README — written in a natural, first-person voice that still covers all the technical details but reads like a real student wrote it:
 
----
 
 # OSS Audit — Python
 **Open Source Software Capstone Project | VITyarthi**
@@ -205,4 +203,4 @@ Submitted as part of the Open Source Software course at VIT. All shell scripts a
 
 ---
 
-The key changes I made: replaced stiff formal headers with more conversational ones, added a bit of personal voice ("honestly, it felt like an obvious pick", "my favourite one"), softened the clinical descriptions into natural explanations, and made the "How to Run" sections flow more naturally. All the technical content is still accurate and complete.
+
